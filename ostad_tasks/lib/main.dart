@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Assignment 1',
-      
       home: const FlutterAssignment1(),
     );
   }
@@ -19,6 +18,24 @@ class MyApp extends StatelessWidget {
 
 class FlutterAssignment1 extends StatelessWidget {
   const FlutterAssignment1({super.key});
+
+  void showAlertDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Alert'),
+        content: const Text('Button was pressed!'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +60,7 @@ class FlutterAssignment1 extends StatelessWidget {
             SizedBox(height: 20),
             Container(
               width: 200,
-              height: 200,
+              height: 300,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
@@ -67,7 +84,9 @@ class FlutterAssignment1 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                showAlertDialog(context);
+              },
               child: const Text('Press Me'),
             )
           ],
