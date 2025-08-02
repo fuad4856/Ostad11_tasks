@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ostad_tasks/live_test_2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Assignment 1',
-      home: const FlutterAssignment1(),
+      title: 'Flutter Live Test 2',
+      debugShowCheckedModeBanner: false,
+      home: const FlutterLive_test_2(),
     );
   }
 }
+/*
 
 class FlutterAssignment1 extends StatelessWidget {
   const FlutterAssignment1({super.key});
@@ -95,3 +98,4 @@ class FlutterAssignment1 extends StatelessWidget {
     );
   }
 }
+*/
